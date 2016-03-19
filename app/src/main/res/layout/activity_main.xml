@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/editText"
+            android:layout_above="@+id/the_button"
+            android:layout_alignParentRight="true"
+            android:inputType="number"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/the_button"
+            android:onClick="clickTheButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            >
+
+            <TextView
+                android:id="@+id/roll1"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:id="@+id/roll2"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"
+                android:inputType="number"
+                />
+
+            <TextView
+                android:id="@+id/frameTotal1"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="viewEnd"
+                android:inputType="number"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="true"
+
+            android:layout_toEndOf="@id/layoutFrame1"
+            >
+
+            <TextView
+                android:id="@+id/roll3"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/roll4"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/frameTotal2"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"
+                android:inputType="number"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame3"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/layoutFrame2">
+
+            <TextView
+                android:id="@+id/roll5"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll6"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal3"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame4"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/layoutFrame3">
+
+            <TextView
+                android:id="@+id/roll7"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll8"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal4"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame5"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/layoutFrame4">
+
+            <TextView
+                android:id="@+id/roll9"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll10"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal5"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame6"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/layoutFrame1"
+
+            >
+
+            <TextView
+                android:id="@+id/roll11"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll12"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal6"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame7"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_below="@id/layoutFrame2"
+            android:layout_alignLeft="@id/layoutFrame2"
+
+            >
+
+            <TextView
+                android:id="@+id/roll13"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll14"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal7"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame8"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_below="@id/layoutFrame3"
+            android:layout_alignLeft="@id/layoutFrame3"
+            >
+
+            <TextView
+                android:id="@+id/roll15"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll16"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal8"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame9"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_below="@id/layoutFrame4"
+            android:layout_alignLeft="@id/layoutFrame4"
+            >
+
+            <TextView
+                android:id="@+id/roll17"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll18"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal9"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFrame10"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@color/lightgrey"
+            android:layout_below="@id/layoutFrame5"
+            android:layout_alignLeft="@id/layoutFrame5"
+            >
+
+            <TextView
+                android:id="@+id/roll19"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/roll20"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:id="@+id/frameTotal10"
+                android:layout_alignParentBottom="true"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:textAlignment="textEnd"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
