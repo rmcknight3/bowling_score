@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity{
     //Variables
-    public int[] frameViewArray = new int[]{R.id.frameTotal1,R.id.frameTotal2,R.id.frameTotal3,R.id.frameTotal4,R.id.frameTotal5,R.id.frameTotal6,R.id.frameTotal7,R.id.frameTotal8,R.id.frameTotal8,R.id.frameTotal10};
+    public int[] frameViewArray = new int[]{R.id.frameTotal1,R.id.frameTotal2,R.id.frameTotal3,R.id.frameTotal4,R.id.frameTotal5,R.id.frameTotal6,R.id.frameTotal7,R.id.frameTotal8,R.id.frameTotal9,R.id.frameTotal10};
     public int frameIndex = 0;
 
     public int textArrayIndex = 0;
@@ -29,9 +29,14 @@ public class MainActivity extends AppCompatActivity{
     public int totalsIndex = 0;
 
     public Toast toast;
+    public Toast toast2;
     public EditText mEditText;
     public TextView rollTextView;
     public TextView frameTotalView;
+
+    //running total of total game score
+    public int gameScoreInt = 0;
+    public TextView gameScoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +50,14 @@ public class MainActivity extends AppCompatActivity{
     public void clickTheButton(View view) {
         rollTextView = (TextView) findViewById(textViewArray[textArrayIndex]);//set all declarations within button
         frameTotalView = (TextView) findViewById(frameViewArray[frameIndex]);
+        gameScoreView = (TextView) findViewById(R.id.gameScoreView);
 
         //if blank, force an entry (TextUtils.isEmpty)
         if (TextUtils.isEmpty(mEditText.getText().toString())){
             toast = Toast.makeText(getApplicationContext(), "Enter something!", Toast.LENGTH_SHORT);
             toast.show();
-        }else{//continues normally
-            if(textArrayIndex<textViewArray.length){//input index starts as 0
+        } else{//continues normally
+            if(frameIndex<10){//input index starts as 0
                 inputArray[inputIndex] = Integer.parseInt(mEditText.getText().toString());
                 totalsArray[0] = inputArray[0] + inputArray[1];
                 totalsArray[1] = inputArray[2] + inputArray[3];
@@ -64,14 +70,20 @@ public class MainActivity extends AppCompatActivity{
                 totalsArray[8] = inputArray[16] + inputArray[17];
                 totalsArray[9] = inputArray[18] + inputArray[19];
 
+                gameScoreInt = (totalsArray[0] + totalsArray[1] + totalsArray[2] + totalsArray[3] + totalsArray[4] + totalsArray[5] + totalsArray[6] + totalsArray[7] + totalsArray[8] + totalsArray[9]);
+
                 rollTextView.setText(mEditText.getText().toString());
-                frameTotalView.setText(Integer.toString(totalsArray[frameIndex]));//put score total in current frame
+                frameTotalView.setText(Integer.toString(gameScoreInt));//put current total in current frame
+//                frameTotalView.setText(Integer.toString(frameIndex));//put current total in current frame
 
                 mEditText.getText().clear();//clear editText input
                 textArrayIndex++;//move to next space
                 inputIndex++;
                 totalsIndex++;
-                if(inputIndex == 2 || inputIndex == 4|| inputIndex == 6|| inputIndex == 8|| inputIndex == 10){frameIndex++;}//next Frame
+
+                //add more for each frame
+                if(inputIndex == 2 || inputIndex == 4|| inputIndex == 6|| inputIndex == 8|| inputIndex == 10|| inputIndex == 12|| inputIndex == 14|| inputIndex == 16|| inputIndex == 18|| inputIndex == 20)
+                {frameIndex++;}//next Frame
             }else{
                 toast = Toast.makeText(getApplicationContext(), "No more frames", Toast.LENGTH_SHORT);
                 toast.show();
