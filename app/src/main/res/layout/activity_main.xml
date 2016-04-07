@@ -19,7 +19,8 @@
             android:id="@+id/editText"
             android:layout_above="@+id/the_button"
             android:layout_alignParentRight="true"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:text="4"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -340,6 +341,16 @@
                 android:layout_height="25dp"
                 android:textAlignment="textEnd"/>
         </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR"
+            android:id="@+id/resetButton"
+            android:layout_alignTop="@+id/the_button"
+            android:layout_centerHorizontal="true"
+            android:onClick="clearButton"
+            />
 
     </RelativeLayout>
 
